@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class PageObjects {
 	
-	public Properties prop = new Properties();
+	public static Properties prop = new Properties();
 
 	public static class HomeScreen extends GenericPageObject{
 		
@@ -128,13 +128,13 @@ public class PageObjects {
 		
 		public static void enterEmail() {
 			
-			driverWrapper.findElementBy(Locators.ID, EMAIL_FIELD).sendKeys(prop.getProperty('EMAIL'));
+			driverWrapper.findElementBy(Locators.ID, EMAIL_FIELD).sendKeys(prop.getProperty("EMAIL"));
 		}
 		
 		
 		public static void enterPassword() {
 			
-			driverWrapper.findElementBy(Locators.ID, PASSWORD_FIELD).sendKeys(prop.getProperty('PASSWORD'));
+			driverWrapper.findElementBy(Locators.ID, PASSWORD_FIELD).sendKeys(prop.getProperty("PASSWORD"));
 		}
 		
 		
